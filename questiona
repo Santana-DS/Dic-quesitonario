@@ -1,0 +1,37 @@
+pro_pre = input().split()
+catalogo = dict()
+pro = list()
+pre = list()
+c = 0
+for i in pro_pre:
+    c +=1
+    if i.isalpha():
+        pro.append(i)
+    else:
+        pre.append(i)
+for i in range(c//2):
+    catalogo[pro[i]] = pre[i] #catalogo
+    
+ped = input().split()
+pedido = dict()
+prod = list()
+prec = list()
+count = 0
+for i in ped:
+    count +=1
+    if i.isalpha():
+        prod.append(i)
+    else:
+        prec.append(i)
+for i in range(count//2):
+    pedido[prod[i]] = prec[i] #pedido
+
+for k, v in pedido.items():
+    for item, valor in catalogo.items():
+        if k == item:
+        
+        
+        
+print(catalogo)
+print(pedido)
+
