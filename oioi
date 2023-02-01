@@ -1,0 +1,29 @@
+n = int(input())
+t = int(input())
+lista = list()
+linha = list()
+for i in range(n):
+    linhas = input().split()
+    linha = [int(val) for val in linhas]
+    lista.append(linha)
+
+indice = list()
+for i in range(n):
+    indice.append(lista[i][t])
+
+indice.sort()
+
+c = 0
+soma = 0
+maior = dict()
+for i in indice:
+    for linha in lista: 
+        if i == linha[t]:
+            c +=1
+        if c == 1:
+            print(linha)
+        if c > 1:
+            for linha in lista:
+                if i == linha[t]:
+                    soma += i
+                    maior[linha] = soma
